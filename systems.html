@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected systems and case studies by Joy Airhunmwunde.">
+  <title>Systems | Joy Airhunmwunde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT@9..144,500,50&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a class="is-active" href="systems.html">Systems</a>
+      <a href="thinking.html">Thinking</a>
+      <a href="lab.html">Lab</a>
+    </nav>
+    <div class="site-actions">
+      <a class="header-note" href="mailto:airhunmwundejoy@gmail.com">Available for platform and data roles</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a>
+    <a href="systems.html">Systems</a>
+    <a href="thinking.html">Thinking</a>
+    <a href="lab.html">Lab</a>
+  </div>
+
+  <main>
+    <section class="page-hero reveal">
+      <p class="eyebrow">SELECTED SYSTEMS / 2024 - 2026</p>
+      <h1>I like architecture most when you can still explain the reasoning behind it six months later.</h1>
+      <p class="page-intro">These are not meant as giant trophy cases. They are a few examples of how I think through ingestion, transformation, deployment, reliability, and operational tradeoffs.</p>
+    </section>
+
+    <section id="cocosurf" class="section case-study reveal">
+      <div class="case-header">
+        <div>
+          <p class="card-kicker">01 / CLOUD ANALYTICS PLATFORM</p>
+          <h2>Cocosurf Gear</h2>
+        </div>
+        <p>Five daily nested JSON feeds, shaped into a cleaner analytical layer the team could actually trust.</p>
+      </div>
+      <div class="meta-row">
+        <span>AWS</span>
+        <span>Snowflake</span>
+        <span>dbt</span>
+        <span>Airflow</span>
+        <span>Docker</span>
+        <span>ECS</span>
+      </div>
+      <div class="case-grid">
+        <div class="case-copy">
+          <h3>The question</h3>
+          <p>How do you keep semi-structured source data from becoming analytical chaos once it reaches production?</p>
+          <h3>What I built</h3>
+          <p>I worked on a pipeline that transformed nested JSON feeds from Amazon S3 into tested Snowflake models for customers, products, orders, order items, and inventory. The work was built with repeatability in mind, not just one successful run.</p>
+          <p>dbt was containerized, images were delivered through ECR, transformations ran on ECS Fargate, and orchestration tied the flow together. The result was a platform that turned raw source movement into something analysts could use more confidently.</p>
+        </div>
+        <div class="system-diagram">
+          <div>S3 <small>raw feeds</small></div>
+          <i>→</i>
+          <div>Snowflake <small>central store</small></div>
+          <i>→</i>
+          <div>dbt <small>tests and models</small></div>
+          <i>→</i>
+          <div>Airflow <small>workflow control</small></div>
+          <i>→</i>
+          <div>ECS <small>container execution</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="luminabrick" class="section case-study muted-surface reveal">
+      <div class="case-header">
+        <div>
+          <p class="card-kicker">02 / HISTORICAL MIGRATION</p>
+          <h2>LuminaBrick Properties</h2>
+        </div>
+        <p>Extract seven years of business-critical data without turning the live platform into a reporting engine.</p>
+      </div>
+      <div class="meta-row">
+        <span>PostgreSQL</span>
+        <span>Python</span>
+        <span>Validation</span>
+        <span>Amazon S3</span>
+      </div>
+      <div class="case-grid">
+        <div class="case-copy">
+          <h3>The constraint</h3>
+          <p>The production platform needed to remain stable while a separate data science effort gained access to historical records.</p>
+          <h3>The approach</h3>
+          <p>I designed a schema-preserving extraction path across key PostgreSQL tables, with validation built into the handoff. The aim was to move data in a way that respected operational risk instead of pretending extraction was just a copy-and-paste exercise.</p>
+        </div>
+        <div class="system-diagram compact-diagram">
+          <div>PostgreSQL <small>production source</small></div>
+          <i>→</i>
+          <div>Python <small>controlled extract</small></div>
+          <i>→</i>
+          <div>Validation <small>quality checks</small></div>
+          <i>→</i>
+          <div>S3 <small>safe landing zone</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iceberg" class="section case-study dark-panel reveal">
+      <div class="case-header">
+        <div>
+          <p class="card-kicker">03 / RESEARCH INTO RELIABILITY</p>
+          <h2>AI-Driven Schema Drift Detection</h2>
+        </div>
+        <p>Trying to answer a practical question: when a schema changes, what breaks next and what should the platform do about it?</p>
+      </div>
+      <div class="meta-row meta-row-dark">
+        <span>Apache Iceberg</span>
+        <span>Python</span>
+        <span>Graph modeling</span>
+        <span>Random Forest</span>
+      </div>
+      <div class="case-grid">
+        <div class="case-copy">
+          <h3>The idea</h3>
+          <p>Schema drift is rarely just a local event. I explored a graph-based propagation model that could reason about downstream dependencies and pair that reasoning with ML-assisted severity classification.</p>
+          <h3>Why it matters</h3>
+          <p>The useful part was not the novelty for its own sake. It was the possibility of platforms responding with better judgment: log a minor issue, trigger review for a moderate one, quarantine risky data, or halt when trust is genuinely compromised.</p>
+        </div>
+        <div class="results-card">
+          <div><strong>227</strong><span>metadata snapshots evaluated</span></div>
+          <div><strong>0.2s</strong><span>end-to-end latency</span></div>
+          <div><strong>100%</strong><span>accuracy and recall on labelled evaluation data</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <p>Systems tell stories about priorities.</p>
+    <p>© <span id="year"></span> Joy Airhunmwunde</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

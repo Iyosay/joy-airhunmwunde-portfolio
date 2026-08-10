@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Small experiments and visual explainers by Joy Airhunmwunde.">
+  <title>Lab | Joy Airhunmwunde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT@9..144,500,50&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a href="systems.html">Systems</a>
+      <a href="thinking.html">Thinking</a>
+      <a class="is-active" href="lab.html">Lab</a>
+    </nav>
+    <div class="site-actions">
+      <a class="header-note" href="mailto:airhunmwundejoy@gmail.com">An experiments corner for curious builders</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a>
+    <a href="systems.html">Systems</a>
+    <a href="thinking.html">Thinking</a>
+    <a href="lab.html">Lab</a>
+  </div>
+
+  <main>
+    <section class="page-hero reveal">
+      <p class="eyebrow">EXPERIMENTS / VISUAL EXPLAINERS / SMALL TOOLS</p>
+      <h1>This is where I make technical ideas a little easier to see.</h1>
+      <p class="page-intro">A small lab space for experiments around data-platform thinking. Not everything here is serious. Some of it just helps a hard concept become clearer.</p>
+    </section>
+
+    <section class="section tool-shell reveal">
+      <div class="section-heading">
+        <p class="eyebrow">EXPERIMENT 01</p>
+        <h2>Schema Diff Visualizer</h2>
+      </div>
+      <p class="tool-intro">Paste two small JSON schemas and compare them. This is a simple visual nudge toward the question I care about most: what changed, and what might that change affect?</p>
+      <div class="schema-tool">
+        <div class="schema-input">
+          <label for="beforeSchema">Before</label>
+          <textarea id="beforeSchema">{
+  "customer_id": "integer",
+  "email": "string",
+  "status": "string"
+}</textarea>
+        </div>
+        <div class="schema-input">
+          <label for="afterSchema">After</label>
+          <textarea id="afterSchema">{
+  "customer_id": "string",
+  "email": "string",
+  "country": "string"
+}</textarea>
+        </div>
+        <div class="schema-actions">
+          <button id="compareSchema" class="button button-primary" type="button">Compare schemas</button>
+        </div>
+        <div class="schema-results" id="schemaResults">
+          <p>Run a comparison to see additions, removals, and type changes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tool-shell muted-surface reveal">
+      <div class="section-heading">
+        <p class="eyebrow">EXPERIMENT 02</p>
+        <h2>Architecture Explorer</h2>
+      </div>
+      <p class="tool-intro">Choose a workload and I’ll sketch the simplified architecture pattern beneath it.</p>
+      <div class="arch-explorer">
+        <div class="arch-tabs">
+          <button class="arch-tab is-active" type="button" data-arch="batch">Batch ELT</button>
+          <button class="arch-tab" type="button" data-arch="stream">Streaming</button>
+          <button class="arch-tab" type="button" data-arch="lakehouse">Lakehouse</button>
+        </div>
+        <div id="archCanvas" class="arch-canvas"></div>
+        <div id="archExplanation" class="arch-explanation"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <p>For ideas that are easier to understand when they move.</p>
+    <p>© <span id="year"></span> Joy Airhunmwunde</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

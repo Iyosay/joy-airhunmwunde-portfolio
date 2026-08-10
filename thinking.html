@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notes from Joy Airhunmwunde on cloud data engineering, reliability, and platform design.">
+  <title>Thinking | Joy Airhunmwunde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT@9..144,500,50&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a href="systems.html">Systems</a>
+      <a class="is-active" href="thinking.html">Thinking</a>
+      <a href="lab.html">Lab</a>
+    </nav>
+    <div class="site-actions">
+      <a class="header-note" href="mailto:airhunmwundejoy@gmail.com">Always happy to talk data and systems</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a>
+    <a href="systems.html">Systems</a>
+    <a href="thinking.html">Thinking</a>
+    <a href="lab.html">Lab</a>
+  </div>
+
+  <main>
+    <section class="page-hero reveal">
+      <p class="eyebrow">FIELD NOTES / WORKING IDEAS / THINGS I'M TESTING</p>
+      <h1>I keep a notebook for the parts of engineering that deserve slower thought.</h1>
+      <p class="page-intro">This section is intentionally less polished than a portfolio page. It is where I hold onto technical ideas long enough to understand what I actually think about them.</p>
+    </section>
+
+    <section class="section notes-grid">
+      <article id="schema-drift" class="note-card reveal">
+        <p class="card-kicker">01 · DATA RELIABILITY · 6 MIN</p>
+        <h2>What schema drift actually breaks</h2>
+        <p class="lead-line">A changed column is visible. The blast radius usually is not.</p>
+        <p>Schema drift often gets framed as a local quality issue: a field disappears, a type changes, a nested structure moves. But the harder engineering question is not just what changed. It is what depends on the thing that changed.</p>
+        <p>That dependency can reach transformations, tests, dashboards, ML features, and business reporting. So detection is not enough on its own. A useful platform also needs some way to reason about downstream impact.</p>
+      </article>
+      <article id="iac" class="note-card reveal delay-1">
+        <p class="card-kicker">02 · PLATFORM ENGINEERING · 5 MIN</p>
+        <h2>Infrastructure as Code is a data engineering skill</h2>
+        <p class="lead-line">Pipelines inherit the strengths and weaknesses of the environment around them.</p>
+        <p>Data discussions often end at SQL, Python, models, and orchestration. Production work does not. It depends on identity, storage, networking, compute, deployment, and permissions.</p>
+        <p>Infrastructure as Code makes those assumptions reviewable. It moves environment setup from tribal memory into versioned system design, which is healthier for teams and much kinder to future debugging.</p>
+      </article>
+      <article id="dbt" class="note-card reveal delay-2">
+        <p class="card-kicker">03 · ANALYTICS ENGINEERING · 4 MIN</p>
+        <h2>dbt is powerful. It is not the whole platform.</h2>
+        <p class="lead-line">Transformation matters, but reliability lives across more layers than one tool can cover.</p>
+        <p>dbt gives structure to transformation work: modular models, tests, lineage, and documentation. That is valuable. But a production-grade data platform also lives in ingestion contracts, secrets handling, orchestration, deployment, monitoring, and failure recovery.</p>
+        <p>The clearer those boundaries are, the easier the whole system becomes to maintain.</p>
+      </article>
+    </section>
+
+    <section class="section journal-callout reveal">
+      <div>
+        <p class="eyebrow">CURRENTLY EXPLORING</p>
+        <h2>Lakehouse reliability, observability, and what “AI-ready” infrastructure should actually mean in practice.</h2>
+      </div>
+      <a class="button button-primary" href="mailto:airhunmwundejoy@gmail.com?subject=Technical%20conversation">Start a technical conversation</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="site-mark" href="index.html">JOY<span>/A</span></a>
+    <p>Thoughts in progress, not commandments.</p>
+    <p>© <span id="year"></span> Joy Airhunmwunde</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
