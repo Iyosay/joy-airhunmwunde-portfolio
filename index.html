@@ -1,153 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Joy Airhunmwunde is a cloud data engineer building reliable platforms at the intersection of analytics, infrastructure, and intelligent systems.">
-  <title>Joy Airhunmwunde | Cloud Data Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT@9..144,500,50&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Joy Airhunmwunde is a Cloud Data Engineer interested in reliable data platforms, cloud infrastructure, and the engineering beneath analytics.">
+<title>Joy Airhunmwunde | Cloud Data Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="brand-home">
-  <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Joy Airhunmwunde home"><strong>JOY</strong><span>AIRHUNMWUNDE</span></a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="about.html">About</a>
-      <a href="systems.html">Systems</a>
-      <a href="thinking.html">Thinking</a>
-      <a href="lab.html">Lab</a>
-    </nav>
-    <div class="site-actions">
-      
-      <a class="button button-soft" href="Joy_Airhunmwunde_Resume.docx" download>Resume</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
-    </div>
-  </header>
+<body class="minimal-site">
+<header class="minimal-header">
+<a class="minimal-name" href="index.html">Joy Airhunmwunde</a>
+<nav><a href="about.html">About</a><a href="systems.html">Work</a><a href="thinking.html">Notes</a></nav>
+<div class="minimal-actions"><a href="Joy_Airhunmwunde_Resume.docx" download>Résumé</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button></div>
+</header>
+<div class="mobile-menu" id="mobileMenu"><a href="about.html">About</a><a href="systems.html">Work</a><a href="thinking.html">Notes</a><a href="Joy_Airhunmwunde_Resume.docx" download>Résumé</a></div>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="about.html">About</a>
-    <a href="systems.html">Systems</a>
-    <a href="thinking.html">Thinking</a>
-    <a href="lab.html">Lab</a>
-    <a href="Joy_Airhunmwunde_Resume.docx" download>Resume</a>
-  </div>
+<main>
+<section class="minimal-hero reveal">
+<p class="quiet-label">CLOUD DATA ENGINEER</p>
+<h1>Hi, I’m Joy.</h1>
+<p class="hero-intro">I’m a Cloud Data Engineer interested in how data platforms are designed, deployed and kept reliable over time.</p>
+<p class="hero-support">My background spans research, analytics and business intelligence. These days, I spend more time thinking about the infrastructure beneath the dashboard: pipelines, orchestration, cloud platforms and the decisions that make systems easier to trust.</p>
+<div class="simple-links"><a class="simple-primary" href="systems.html">View my work</a><a href="about.html">More about me</a></div>
+</section>
 
-  <main>
-    <section class="hero hero-reference">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">DATA · SYSTEMS · IDEAS</p>
-        <h1>I build the systems behind <em>trustworthy data.</em></h1>
-        <p class="hero-text">I’m Joy Airhunmwunde, a Cloud Data Engineer working where infrastructure, analytics and intelligent systems meet. I care about platforms that are reliable enough to trust, clear enough to understand, and useful enough to matter.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="systems.html">View selected systems</a>
-          <a class="button button-ghost" href="about.html">About Joy</a>
-        </div>
-        <div class="hero-mini-meta">
-          <span>MSc Computer Science</span>
-          <span>Cloud Data Engineering</span>
-          <span>Lakehouse Reliability Research</span>
-        </div>
-      </div>
+<section class="minimal-section intro-section reveal">
+<p class="quiet-label">A LITTLE ABOUT ME</p>
+<div class="editorial-split">
+<h2>I didn’t start out in engineering.</h2>
+<div><p>I started in research, moved into analytics and BI, and eventually became more interested in the infrastructure beneath the dashboards than the dashboards themselves.</p><p>That path still shapes how I work. I care about technical quality, but I also care about whether the people using a system can understand it, depend on it and change it without unnecessary friction.</p><a class="under-link" href="about.html">My story →</a></div>
+</div>
+</section>
 
-      <div class="brand-art reveal delay-1" aria-label="Abstract editorial artwork">
-<div class="brand-art-ring ring-a"></div><div class="brand-art-ring ring-b"></div>
-<div class="brand-art-node node-a"></div><div class="brand-art-node node-b"></div><div class="brand-art-node node-c"></div>
-<div class="brand-art-copy"><small>THE PRACTICE</small><strong>Research → Analytics → Engineering</strong><span>Build carefully. Question clearly. Make it useful.</span></div>
-</div></section>
+<section class="minimal-section work-list">
+<div class="minimal-section-head reveal"><p class="quiet-label">SELECTED WORK</p><h2>A few things I’ve worked on.</h2></div>
+<a class="work-row reveal" href="systems.html#cocosurf"><span class="work-no">01</span><div><h3>Cocosurf Gear</h3><p>Cloud analytics platform</p></div><p class="work-desc">Turning nested JSON feeds into tested Snowflake models with dbt, Airflow, Docker and ECS.</p><span>↗</span></a>
+<a class="work-row reveal" href="systems.html#luminabrick"><span class="work-no">02</span><div><h3>LuminaBrick Properties</h3><p>Historical data migration</p></div><p class="work-desc">Moving seven years of business-critical data without treating the production platform like an extraction playground.</p><span>↗</span></a>
+<a class="work-row reveal" href="systems.html#iceberg"><span class="work-no">03</span><div><h3>Schema Drift Detection</h3><p>Master’s research</p></div><p class="work-desc">Exploring downstream impact and ML-assisted response strategies for Apache Iceberg schema changes.</p><span>↗</span></a>
+</section>
 
-    <section class="milestone reveal">
-<div class="milestone-mark"><span>2026</span><strong>MSc</strong></div>
-<div class="milestone-copy"><p class="eyebrow">A MILESTONE</p><h2>Distinction.</h2>
-<h3>MSc Computer Science · University of Hertfordshire</h3>
-<p>Postgraduate work spanning cloud data engineering, advanced analytics and scalable platform design, culminating in research into AI-driven schema drift detection for Apache Iceberg lakehouses.</p>
-<a class="text-link" href="systems.html#iceberg">Explore the research →</a></div></section>
+<section class="degree-section reveal">
+<div><p class="quiet-label">2026 · A RECENT MILESTONE</p><h2>MSc Computer Science<br><em>with Distinction.</em></h2></div>
+<div><p class="degree-school">University of Hertfordshire</p><p>My postgraduate work strengthened my focus on cloud data engineering and scalable platform design. My final research explored AI-driven schema drift detection for Apache Iceberg lakehouses.</p><a class="under-link" href="systems.html#iceberg">About the research →</a></div>
+</section>
 
-    <section class="brand-strip reveal">
-      <span>Federated Engineers</span>
-      <span>Smartflow Technologies</span>
-      <span>Amdari</span>
-      <span>University of Hertfordshire</span>
-    </section>
+<section class="minimal-section notes-preview">
+<div class="minimal-section-head reveal"><p class="quiet-label">NOTES</p><h2>Things I’m thinking about.</h2></div>
+<div class="note-links">
+<a class="note-row reveal" href="thinking.html#schema-drift"><span>Data reliability</span><h3>What schema drift actually breaks</h3><span>Read →</span></a>
+<a class="note-row reveal" href="thinking.html#iac"><span>Platform engineering</span><h3>Infrastructure as Code is a data engineering skill</h3><span>Read →</span></a>
+<a class="note-row reveal" href="thinking.html#dbt"><span>Analytics engineering</span><h3>dbt is powerful. It is not the whole platform.</h3><span>Read →</span></a>
+</div>
+</section>
 
-    <section class="section spotlight-grid">
-      <article class="spotlight-card feature-card reveal">
-        <p class="card-kicker">ABOUT</p>
-        <h2>A career built from both technical depth and business context.</h2>
-        <p>Joy’s path through research, analytics, and BI leadership means she understands not only how platforms are built, but why teams need them to be dependable, explainable, and easy to evolve.</p>
-        <a class="text-link" href="about.html">Read full story</a>
-      </article>
-
-      <article class="spotlight-card metrics-card reveal delay-1"><p class="card-kicker">PROOF, NOT THEATRE</p><div class="metric-list">
-<div><strong>50%</strong><span>less manual effort through Python and Bash automation</span></div>
-<div><strong>227</strong><span>metadata snapshots evaluated in schema-drift research</span></div>
-<div><strong>25×</strong><span>faster than the five-second operational latency requirement</span></div></div></article>
-    </section>
-
-    <section class="section callout-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2>Recent systems, platform work, and research.</h2>
-      </div>
-      <div class="showcase-grid">
-        <article class="showcase-card reveal">
-          <p class="card-kicker">CLOUD ANALYTICS PLATFORM</p>
-          <h3>Cocosurf Gear</h3>
-          <p>Designed a cloud workflow that transformed nested JSON feeds into tested Snowflake models using dbt, Airflow, Docker, and ECS.</p>
-          <a class="text-link" href="systems.html#cocosurf">Explore project</a>
-        </article>
-        <article class="showcase-card reveal delay-1">
-          <p class="card-kicker">HISTORICAL DATA MIGRATION</p>
-          <h3>LuminaBrick Properties</h3>
-          <p>Created a production-safe extraction approach that moved seven years of business-critical data without overloading the live platform.</p>
-          <a class="text-link" href="systems.html#luminabrick">See architecture</a>
-        </article>
-        <article class="showcase-card reveal delay-2">
-          <p class="card-kicker">LAKEHOUSE RELIABILITY</p>
-          <h3>Schema Drift Detection</h3>
-          <p>Researched graph-based impact analysis and ML-assisted response strategies for Apache Iceberg lakehouses.</p>
-          <a class="text-link" href="systems.html#iceberg">Read research</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section two-column reference-band">
-      <div class="essay-card reveal">
-        <p class="card-kicker">HOW SHE THINKS</p>
-        <h2>Technical writing that stays close to the real work.</h2>
-        <p>Joy writes about schema drift, infrastructure as code, and platform design from a practitioner’s point of view. The goal is not to sound abstract. It is to make complex systems easier to reason about.</p>
-        <a class="button button-primary" href="thinking.html">Visit Thinking</a>
-      </div>
-      <aside class="aside-card reveal delay-1">
-        <p class="card-kicker">WHAT STANDS OUT</p>
-        <ul class="micro-list">
-          <li>Builds with AWS, Snowflake, dbt, Airflow, Docker, and Terraform</li>
-          <li>Comfortable across technical delivery and stakeholder-facing work</li>
-          <li>Interested in reliable systems that can support analytics and AI well</li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="section contact-panel reveal">
-      <div>
-        <p class="eyebrow">CONNECT</p>
-        <h2>Looking for someone who can think through the data platform and the people depending on it?</h2>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:airhunmwundejoy@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/joy-airhunmwunde" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/Iyosay" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <a class="wordmark" href="index.html"><strong>JOY</strong><span>AIRHUNMWUNDE</span></a>
-    <p>Cloud data engineering with a calm, thoughtful point of view.</p>
-    <p>© <span id="year"></span> Joy Airhunmwunde</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<section class="minimal-contact reveal">
+<p class="quiet-label">SAY HELLO</p>
+<h2>If you’re working on an interesting data problem, I’d be happy to hear about it.</h2>
+<div class="simple-links"><a class="simple-primary" href="mailto:airhunmwundejoy@gmail.com">Email me</a><a href="https://linkedin.com/in/joy-airhunmwunde" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/Iyosay" target="_blank" rel="noreferrer">GitHub</a></div>
+</section>
+</main>
+<footer class="minimal-footer"><span>Joy Airhunmwunde</span><span>Cloud Data Engineer</span><span>© <span id="year"></span></span></footer>
+<script src="script.js"></script>
+</body></html>
